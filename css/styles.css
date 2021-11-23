@@ -222,14 +222,14 @@ img{
 }
 .features-items {
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: -210px;
   padding-right: 30px;
   padding-left: 30px;
   text-align: left;
 }
 .features-item {
-  width: 433px;
+  width: 100%;
+  max-width: 433px;
 }
 .features-item:not(:last-child){
   margin-right: 20px;
@@ -315,4 +315,23 @@ img{
 .how-works-button {
   background-color: #C99B67;
   color: #fff;
+}
+
+/* FOOTER */
+.site-footer{
+  margin-top: 50px;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color:#F3D7B7;
+}
+.social-media-box {
+  display: flex;
+  align-items: center;
+}
+.social-media-item:not(:last-child) {
+  margin-right: 30px;
+}
+.social-media-item-link {
+}
+.social-media-item-img {
 }
