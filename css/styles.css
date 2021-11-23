@@ -25,6 +25,10 @@ img{
   height: auto;
   object-fit: cover;
 }
+*:focus{
+  outline: 2px dashed #555;
+  outline-offset: 3px;
+}
 .button{
   display: inline-block;
   padding: 16px 24px;
@@ -35,7 +39,15 @@ img{
   border-radius: 100px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.4s ease opacity;
 }
+.button:hover{
+  opacity: 0.8;
+}
+.button:active{
+  opacity: 0.6;
+}
+
 
 /* CONTAINER  */
 .container{
@@ -58,17 +70,11 @@ img{
   flex-grow: 1;
 }
 
-/* SITE-TOP */
-.site-top {
-  margin-bottom: 20px;
-  /* background-image: url("../img/hero-bg@2x.svg"); */
-  background-color:rgba(243, 215, 183, 1);
-
-
-}
+/* SITE-HEADER */
 .site-header {
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color:#F3D7B7;
 }
 .header-container {
   display: flex;
@@ -77,6 +83,13 @@ img{
 }
 .site-logo-link{
   display: flex;
+  transition: 0.4s ease opacity;
+}
+.site-logo-link:hover{
+  opacity: 0.8;
+}
+.site-logo-link:active{
+  opacity: 0.6;
 }
 .site-logo {
   width: 235px;
@@ -98,14 +111,25 @@ img{
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.4s ease opacity, 0.4s ease color;
   color: #333;
 }
+.site-nav-item-link:hover{
+  color: #0A775F;
+}
+.site-nav-item-link:active{
+  opacity: 0.8;
+}
+
+/* HERO */
 .hero {
+  margin-bottom: 20px;
+  background-color:#F3D7B7;
   background-image: url("../img/hero-img.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left calc(50% + 365px) center;
-}
+  }
 .hero-content {
   padding: 116px 50px 250px 100px;
 }
@@ -181,6 +205,17 @@ img{
   color: #333;
   text-transform: uppercase;
 }
+.our-collection-item-link{
+  text-decoration: none;
+  transition: 0.4s ease opacity;
+  color: #333;
+}
+.our-collection-item-link:hover{
+  opacity: 0.8;
+}
+.our-collection-item-link:active{
+  opacity: 0.6;
+}
 .our-collection-item-text {
   margin-top: 0;
   margin-bottom: 0;
@@ -248,6 +283,17 @@ img{
   line-height: 35px;
   color: #333;
   text-transform: uppercase;
+}
+.features-item-link{
+  text-decoration: none;
+  transition: 0.4s ease opacity;
+  color: #333;
+}
+.features-item-link:hover{
+  opacity: 0.8;
+}
+.features-item-link:active{
+  opacity: 0.6;
 }
 .features-item-text {
   font-size: 18px;
@@ -332,6 +378,16 @@ img{
   margin-right: 30px;
 }
 .social-media-item-link {
+  display: flex;
+  transition: 0.4s ease opacity;
+}
+.social-media-item-link:hover{
+  opacity: 0.8;
+}
+.social-media-item-link:active{
+  opacity: 0.6;
 }
 .social-media-item-img {
+  width: 30px;
+  height: 30px;
 }
