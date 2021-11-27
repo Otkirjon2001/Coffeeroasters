@@ -1,3 +1,10 @@
+/* CUSTOM PROPERTY */
+:root{
+  --text-color: #333;
+  --brand-color: #0a775f;
+  --text-color2: #fff;
+}
+/* FONTS */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -41,7 +48,7 @@ body{
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  background-color: #fff;
+  background-color: var(--text-color2);
   color: #000;
 }
 img{
@@ -50,7 +57,7 @@ img{
   object-fit: cover;
 }
 *:focus{
-  outline: 2px dashed #0A775F;
+  outline: 2px dashed var(--brand-color);
   outline-offset: 3px;
 }
 .button{
@@ -64,6 +71,7 @@ img{
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.4s ease opacity;
+  white-space: nowrap;
 }
 .button:hover{
   opacity: 0.8;
@@ -89,6 +97,13 @@ img{
   margin-left: auto;
 }
 
+/* HEADER AND HERO */
+.header-and-hero{
+  margin-bottom: 20px;
+  background-color: #F3D7B7;
+  background-image: url("../img/header-and-hero-bg.jpg");
+}
+
 /* MAIN CONTENT  */
 .main-content{
   flex-grow: 1;
@@ -98,7 +113,6 @@ img{
 .site-header {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color:#F3D7B7;
 }
 .header-container {
   display: flex;
@@ -107,6 +121,7 @@ img{
 }
 .site-logo-link{
   display: flex;
+  flex-shrink: 0;
   transition: 0.4s ease opacity;
 }
 .site-logo-link:hover{
@@ -136,26 +151,22 @@ img{
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.4s ease opacity, 0.4s ease color;
-  color: #333;
+  color: var(--text-color);
+  white-space:nowrap;
 }
 .site-nav-item-link:hover{
-  color: #0A775F;
+  color: var(--brand-color);
 }
 .site-nav-item-link:active{
   opacity: 0.8;
 }
 
 /* HERO */
-.hero {
-  margin-bottom: 20px;
-  background-color:#F3D7B7;
-  background-image: url("../img/hero-img.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left calc(50% + 365px) center;
+.hero-container {
+  display: flex;
 }
 .hero-content {
-  padding: 116px 50px 250px 100px;
+  padding: 116px 116px 250px 100px;
 }
 .hero-heading {
   margin-top: 0;
@@ -171,8 +182,11 @@ img{
 
 }
 .hero-button {
-  background-color: #0A775F;
-  color: #fff;
+  background-color: var(--brand-color);
+  color: var(--text-color2);
+}
+.hero-img{
+  display: block;
 }
 
 /* OUR-COLLECTION  */
@@ -229,16 +243,16 @@ img{
   font-weight: 500;
   font-size: 48px;
   line-height: 56px;
-  color: #333;
+  color: var(--text-color);
   text-transform: uppercase;
 }
 .our-collection-item-link{
   text-decoration: none;
   transition: 0.4s ease opacity, 0.4s ease color;
-  color: #333;
+  color: var(--text-color);
 }
 .our-collection-item-link:hover{
-  color: #0A775F;
+  color: var(--brand-color);
 }
 .our-collection-item-link:active{
   opacity: 0.8;
@@ -248,7 +262,7 @@ img{
   margin-bottom: 0;
   font-size: 22px;
   line-height: 34px;
-  color: #333;
+  color: var(--text-color);
 }
 
 /* FEATURES  */
@@ -259,12 +273,13 @@ img{
   padding-top: 50px;
   height: 703px;
   background-color: #C99B67;
+  background-image: url("../img/features-bg.jpg");
 }
 .features-theme {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: var(--text-color2);
 }
 .features-heading {
   margin-top: 0;
@@ -273,7 +288,7 @@ img{
   font-size: 50px;
   line-height: 59px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text-color2);
 }
 .features-theme-text {
   margin-top: 0;
@@ -308,16 +323,16 @@ img{
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
-  color: #333;
+  color: var(--text-color);
   text-transform: uppercase;
 }
 .features-item-link{
   text-decoration: none;
   transition: 0.4s ease opacity, 0.4s ease color;
-  color: #333;
+  color: var(--text-color);
 }
 .features-item-link:hover{
-  color: #0A775F;
+  color: var(--brand-color);
 }
 .features-item-link:active{
   opacity: 0.8;
@@ -325,7 +340,7 @@ img{
 .features-item-text {
   font-size: 18px;
   line-height: 28px;
-  color: #333;
+  color: var(--text-color);
 }
 
 /* HOW WORKS  */
@@ -334,7 +349,9 @@ img{
 }
 .how-works-container {
   padding: 54px 30px 46px 30px;
-  background-color: #0A775F;
+  background-color: var(--brand-color);
+  --brand-color: #F3D7B7;
+  background-image: url("../img/how-works-bg.jpg");
   text-align: center;
 }
 .how-works-heading {
@@ -343,7 +360,7 @@ img{
   font-weight: bold;
   font-size: 50px;
   line-height: 59px;
-  color: #fff;
+  color: var(--text-color2);
   text-transform: uppercase;
 }
 .how-works-box {
@@ -356,7 +373,7 @@ img{
   flex-direction: column;
   width: 433px;
   padding: 20px 20px 40px 20px;
-  background-color: #fff;
+  background-color: var(--text-color2);
 }
 .how-works-card::before{
   content:" ";
@@ -373,7 +390,7 @@ img{
   margin-bottom: 45px;
   font-size: 64px;
   line-height: 75px;
-  color: #333;
+  color: var(--text-color);
   opacity: 0.8;
   text-align: right;
 }
@@ -383,13 +400,13 @@ img{
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
-  color: #333;
+  color: var(--text-color);
 }
 .how-works-text {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 28px;
-  color: #333;
+  color: var(--text-color);
 }
 .how-works-button-box {
   display: flex;
@@ -397,7 +414,7 @@ img{
 }
 .how-works-button {
   background-color: #C99B67;
-  color: #fff;
+  color: var(--text-color2);
 }
 
 /* FOOTER */
@@ -406,6 +423,10 @@ img{
   padding-top: 68px;
   padding-bottom: 68px;
   background-color:#F3D7B7;
+  background-image: url("../img/footer-bg.jpg");
+}
+.footer-nav-item-link{
+  font-size: 16px;
 }
 .social-media-box {
   display: flex;
@@ -419,11 +440,33 @@ img{
   transition: 0.4s ease opacity, 0.4s ease color;
 }
 .social-media-item-img {
-  color: #333;
+  color: var(--text-color);
 }
 .social-media-item-link:hover .social-media-item-img{
-  color: #0A775F;
+  color: var(--brand-color);
 }
 .social-media-item-link:active{
   opacity: 0.8;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .header-and-hero{
+    background-image: url("../img/header-and-hero-bg@2x.jpg");
+  }
+  .features-container{
+    background-image: url("../img/features-bg@2x.jpg");
+  }
+  .how-works-container{
+    background-image: url("../img/how-works-bg@2x.jpg");
+  }
+  .site-footer{
+  background-image: url("../img/footer-bg@2x.jpg");
+  }
+
 }
