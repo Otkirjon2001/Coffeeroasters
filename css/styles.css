@@ -325,30 +325,29 @@ img{
   background-color: var(--brand-color);
   --brand-color: #F3D7B7;
   background-image: url("../img/how-works-bg.jpg");
-  text-align: center;
 }
 .how-works-heading {
   margin-top: 0;
-  margin-bottom: 160px;
+  margin-bottom: 80px;
   font-weight: bold;
   font-size: 50px;
   line-height: 59px;
   color: var(--text-color2);
   text-transform: uppercase;
+  text-align: center;
 }
 .how-works-box {
   display: flex;
   margin-bottom: 60px;
-  text-align: left;
+  counter-reset: calculator;
 }
 .how-works-card {
   display: flex;
   flex-direction: column;
-  width: 433px;
-  padding: 20px 20px 40px 20px;
-  background-color: var(--text-color2);
+  counter-increment: calculator;
 }
 .how-works-card::before{
+  margin-bottom: 20px;
   content:" ";
   width: 60px;
   height: 60px;
@@ -359,14 +358,26 @@ img{
 .how-works-card:not(:last-child){
   margin-right: 20px;
 }
-.card-number {
+.how-works-card-inner{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 433px;
+  padding: 20px 20px 40px 20px;
+  background-color:#F8F8F2;
+}
+.how-works-card-inner::before{
+  content: "0"counter(calculator);
+  align-self: flex-end;
   margin-bottom: 45px;
+  font-weight: normal;
   font-size: 64px;
   line-height: 75px;
   color: var(--text-color);
   opacity: 0.8;
-  text-align: right;
 }
+
 .how-works-box-heading{
   margin-top: 0;
   margin-bottom: 10px;
@@ -397,6 +408,11 @@ img{
   padding-bottom: 65px;
   background-color:#F3D7B7;
   background-image: url("../img/footer-bg.jpg");
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .footer-nav-item-link{
   font-size: 16px;
