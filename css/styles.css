@@ -403,7 +403,8 @@ img{
   content: " ";
   height: 3px;
   width: 450px;
-  border-top:3px dashed #C99B67;
+  /* border-top:3px dashed #C99B67; */
+  background-image: url("../img/how-works-hr.svg");
 }
 .how-works-card::before{
   position: relative;
