@@ -381,19 +381,22 @@ img{
 }
 
 /* HOW WORKS  */
-.how-works-container {
+.how-works__container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 54px 30px 46px 30px;
   background-color: var(--brand-color);
   --brand-color: #F3D7B7;
   background-image: url("../img/how-works-bg.jpg");
 }
-.how-works-logo{
+.how-works__logo{
   position: absolute;
   top: 42px;
   right: 68px;
 }
-.how-works-heading {
+.how-works__heading {
   margin-top: 0;
   margin-bottom: 80px;
   font-weight: bold;
@@ -403,7 +406,7 @@ img{
   text-transform: uppercase;
   text-align: center;
 }
-.how-works-list {
+.how-works__list {
   display: flex;
   padding: 0;
   margin: 0;
@@ -411,13 +414,19 @@ img{
   counter-reset: calculator;
   list-style: none;
 }
-.how-works-item {
+.how-works__button {
+  background-color: #C99B67;
+  color: var(--text-color2);
+}
+
+/* WORK */
+.work {
   position: relative;
   display: flex;
   flex-direction: column;
   counter-increment: calculator;
 }
-.how-works-item:not(:last-child):after{
+.work:not(:last-child):after{
   position: absolute;
   top: 30px;
   z-index: 1;
@@ -426,7 +435,7 @@ img{
   height: 3px;
   background-image: url("../img/how-works-hr.svg");
 }
-.how-works-item::before{
+.work::before{
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
@@ -436,10 +445,10 @@ img{
   border: 4px solid #C99B67;
   background-color: #F8F8F2;
 }
-.how-works-item:not(:last-child){
+.work:not(:last-child){
   margin-right: 20px;
 }
-.how-works-item-inner{
+.work__inner{
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -448,7 +457,7 @@ img{
   padding: 20px 20px 40px 20px;
   background-color:#F8F8F2;
 }
-.how-works-item-inner::before{
+.work__inner::before{
   align-self: flex-end;
   content: "0"counter(calculator);
   margin-bottom: 45px;
@@ -458,7 +467,7 @@ img{
   opacity: 0.8;
   color: var(--text-color);
 }
-.how-works-item-heading{
+.work__heading{
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
@@ -466,20 +475,13 @@ img{
   line-height: 47px;
   color: var(--text-color);
 }
-.how-works-text {
+.work__text {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 28px;
   color: var(--text-color);
 }
-.how-works-button-box {
-  display: flex;
-  justify-content: center;
-}
-.how-works-button {
-  background-color: #C99B67;
-  color: var(--text-color2);
-}
+
 
 /* FOOTER */
 .site-footer{
