@@ -385,7 +385,7 @@ img{
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 54px 30px 46px 30px;
   background-color: var(--brand-color);
   --brand-color: #F3D7B7;
